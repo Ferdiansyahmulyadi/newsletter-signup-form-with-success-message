@@ -1,0 +1,179 @@
+@use 'base';
+@use 'functions' as *;
+@use 'mixins' as *;
+
+body {
+  background-color: get-color('neutral', 'charcoal grey');
+}
+
+main {
+  .container {
+    .sign-up-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem-calc(40);
+      background-color: get-color('base', 'white');
+
+      img.sign-up-illustaration {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .sign-up-benefits {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(24);
+        padding: 0 rem-calc(24);
+
+        .h1-mobile {
+          @include typography('h1-roboto-bold-40-mobile');
+          color: get-color('neutral', 'dark slate grey');
+        }
+
+        p {
+          @include typography('p-roboto-regular-16');
+          color: get-color('neutral', 'dark slate grey');
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(16);
+          padding: 0;
+
+          li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: rem-calc(10);
+            padding: 0;
+          }
+        }
+      }
+
+      #form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(24);
+        padding: 0 rem-calc(24);
+        margin-bottom: rem-calc(40);
+
+        .email-group {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(8);
+
+          .email-label {
+            @include typography('p-roboto-bold-small');
+            color: get-color('neutral', 'dark slate grey');
+          }
+
+          .email-input {
+            width: 100%;
+            height: rem-calc(56);
+            text-align: left;
+            padding-top: rem-calc(16);
+            padding-bottom: rem-calc(16);
+            padding-left: rem-calc(24);
+            border: 1px solid get-color('neutral', 'grey');
+            border-radius: rem-calc(8);
+            font-size: rem-calc(16);
+            color: get-color('neutral', 'dark slate grey');
+          }
+        }
+
+        .submit-button {
+          width: 100%;
+          height: rem-calc(56);
+          @include typography('p-roboto-bold-16');
+          color: get-color('base', 'white');
+          background-color: get-color('neutral', 'dark slate grey');
+          padding: rem-calc(16);
+          border: 0px solid #e7e7e7;
+          border-radius: rem-calc(8);
+        }
+      }
+    }
+
+    .success-message {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem-calc(263);
+      padding-top: rem-calc(149);
+      padding-bottom: rem-calc(40);
+      padding-left: rem-calc(24);
+      padding-right: rem-calc(24);
+      background-color: get-color('base', 'white');
+
+      .thank-you-message {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: rem-calc(24);
+        padding: 0;
+
+        .success-icon {
+          width: rem-calc(64);
+          height: rem-calc(64);
+          object-fit: cover;
+        }
+
+        .h1-mobile {
+          @include typography('h1-roboto-bold-40-mobile');
+          color: get-color('neutral', 'dark slate grey');
+          margin-top: rem-calc(16);
+        }
+
+        p {
+          @include typography('p-roboto-regular-16');
+          color: get-color('neutral', 'dark slate grey');
+        }
+
+        span {
+          @include typography('p-roboto-bold-16');
+          color: get-color('neutral', 'dark slate grey');
+        }
+      }
+
+      .dismiss-message-btn {
+        width: 100%;
+        height: rem-calc(56);
+        background-color: get-color('neutral', 'dark slate grey');
+        padding-top: rem-calc(16);
+        padding-bottom: rem-calc(16);
+        border: 0px solid #e7e7e7;
+        border-radius: rem-calc(8);
+
+        .dismiss-message {
+          @include typography('p-roboto-bold-16');
+          text-align: center;
+          vertical-align: middle;
+          color: get-color('base', 'white');
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+}
+
+.attribution {
+  font-size: 11px;
+  color: get-color('base', 'white');
+  text-align: center;
+
+  a {
+    color: hsl(228, 70%, 85%);
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- Sign-up form start -->
+        <div class="sign-up-form">
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            class="sign-up-illustration"
+            alt="sign up illustration"
+          />
+          <div class="sign-up-benefits">
+            <h1 class="h1-mobile">Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul>
+              <li>
+                <img src="/assets/images/icon-list.svg" alt="icon list" />
+                <p>Product discovery and building what matters</p>
+              </li>
+              <li>
+                <img src="/assets/images/icon-list.svg" alt="icon list" />
+                <p>Measuring to ensure updates are a success</p>
+              </li>
+              <li>
+                <img src="/assets/images/icon-list.svg" alt="icon list" />
+                <p>And much more!</p>
+              </li>
+            </ul>
+          </div>
+          <form id="form" novalidate>
+            <div class="email-group">
+              <label for="email" class="email-label">Email address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="email-input"
+                placeholder="email@company.com"
+                autocomplete="on"
+              />
+            </div>
+            <button type="submit" class="submit-button">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+        <!-- Sign-up form end -->
+
+        <!-- Success message start -->
+
+        <!-- Success message end -->
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Ferdiansyah Mulyadi</a>.
+    </div>
+
+    <!-- Place you javascript code here -->
+    <script src="/scripts/main.js"></script>
+  </body>
+</html>

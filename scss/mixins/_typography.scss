@@ -1,0 +1,21 @@
+@use '../functions' as *;
+@use '../variables' as *;
+@use 'sass:map';
+
+//prettier-ignore
+$text-presets: (
+  'h1-roboto-bold-40-mobile': ('font-family': "Roboto", 'font-weight': 700, 'font-size': rem-calc(40), 'line-height': 100%, 'letter-spacing': 0px),
+  'h1-roboto-bold-40-desktop': ('font-family': "Roboto", 'font-weight': 700, 'font-size': rem-calc(40), 'line-height': 100%, 'letter-spacing': 0px),
+  'p-roboto-regular-16': ('font-family': "Roboto", 'font-weight': 400, 'font-size': rem-calc(16), 'line-height': 100%, 'letter-spacing': 0px),
+  'p-roboto-bold-16': ('font-family': "Roboto", 'font-weight': 700, 'font-size': rem-calc(16), 'line-height': 100%, 'letter-spacing': 0px),
+  'p-roboto-bold-small': ('font-family': "Roboto", 'font-weight': 700, 'font-size': rem-calc(12), 'line-height': 100%, 'letter-spacing': 0px),
+);
+
+@mixin typography($text-preset) {
+  $preset: map.get($text-presets, $text-preset);
+  font-family: map.get($preset, 'font-family');
+  font-weight: map.get($preset, 'font-weight');
+  font-size: map.get($preset, 'font-size');
+  line-height: map.get($preset, 'line-height');
+  letter-spacing: map.get($preset, 'letter-spacing');
+}
