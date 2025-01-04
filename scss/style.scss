@@ -28,7 +28,7 @@ main {
         gap: rem-calc(24);
         padding: 0 rem-calc(24);
 
-        .h1-mobile {
+        .h1-style {
           @include typography('h1-roboto-bold-40-mobile');
           color: get-color('neutral', 'dark slate grey');
         }
@@ -166,6 +166,183 @@ main {
 }
 
 @include desktop {
+  main {
+    .container {
+      margin: rem-calc(219) auto;
+
+      .sign-up-form {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: rem-calc(64);
+        padding: rem-calc(24);
+        background-color: get-color('base', 'white');
+
+        .sign-up-benefits {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(24);
+          padding: 0;
+          margin-left: rem-calc(40);
+          margin-top: rem-calc(73);
+
+          .h1-style {
+            @include typography('h1-roboto-bold-40-desktop');
+            color: get-color('neutral', 'dark slate grey');
+          }
+
+          p {
+            @include typography('p-roboto-regular-16');
+            color: get-color('neutral', 'dark slate grey');
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem-calc(16);
+            padding: 0;
+
+            li {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: rem-calc(10);
+              padding: 0;
+            }
+          }
+
+          #form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: rem-calc(24);
+            padding: 0;
+            margin-top: rem-calc(16);
+
+            .email-group {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: rem-calc(8);
+
+              .email-label {
+                @include typography('p-roboto-bold-small');
+                color: get-color('neutral', 'dark slate grey');
+              }
+
+              .email-input {
+                width: 100%;
+                height: rem-calc(56);
+                text-align: left;
+                padding-top: rem-calc(16);
+                padding-bottom: rem-calc(16);
+                padding-left: rem-calc(24);
+                border: 1px solid get-color('neutral', 'grey');
+                border-radius: rem-calc(8);
+                font-size: rem-calc(16);
+                color: get-color('neutral', 'dark slate grey');
+              }
+            }
+
+            .submit-button {
+              width: 100%;
+              height: rem-calc(56);
+              @include typography('p-roboto-bold-16');
+              color: get-color('base', 'white');
+              background-color: get-color('neutral', 'dark slate grey');
+              padding: rem-calc(16);
+              border: 0px solid #e7e7e7;
+              border-radius: rem-calc(8);
+
+              &:hover {
+                background-color: get-color('primary', 'tomato');
+              }
+            }
+          }
+        }
+
+        img.sign-up-illustaration {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .success-message {
+        max-width: rem-calc(504);
+        max-height: rem-calc(520);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem-calc(40);
+        padding-top: rem-calc(48);
+        padding-bottom: rem-calc(64);
+        padding-left: rem-calc(64);
+        padding-right: rem-calc(64);
+        background-color: get-color('base', 'white');
+        border-radius: rem-calc(36);
+        margin: rem-calc(61) auto;
+
+        .thank-you-message {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: rem-calc(24);
+          padding: 0;
+
+          .success-icon {
+            width: rem-calc(64);
+            height: rem-calc(64);
+            object-fit: cover;
+          }
+
+          .h1-mobile {
+            @include typography('h1-roboto-bold-40-desktop');
+            color: get-color('neutral', 'dark slate grey');
+            margin-top: rem-calc(16);
+          }
+
+          p {
+            @include typography('p-roboto-regular-16');
+            color: get-color('neutral', 'dark slate grey');
+          }
+
+          span {
+            @include typography('p-roboto-bold-16');
+            color: get-color('neutral', 'dark slate grey');
+          }
+        }
+
+        .dismiss-message-btn {
+          width: 100%;
+          height: rem-calc(56);
+          background-color: get-color('neutral', 'dark slate grey');
+          padding-top: rem-calc(16);
+          padding-bottom: rem-calc(16);
+          border: 0px solid #e7e7e7;
+          border-radius: rem-calc(8);
+
+          .dismiss-message {
+            @include typography('p-roboto-bold-16');
+            text-align: center;
+            vertical-align: middle;
+            color: get-color('base', 'white');
+          }
+
+          &:hover {
+            background-color: get-color('primary', 'tomato');
+          }
+        }
+      }
+    }
+  }
 }
 
 .attribution {
