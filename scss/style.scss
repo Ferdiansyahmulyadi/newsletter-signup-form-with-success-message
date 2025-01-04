@@ -177,6 +177,7 @@ main {
         align-items: flex-start;
         gap: rem-calc(64);
         padding: rem-calc(24);
+        border-radius: rem-calc(36);
         background-color: get-color('base', 'white');
 
         .sign-up-benefits {

@@ -370,6 +370,7 @@ main .container .success-message .dismiss-message-btn .dismiss-message {
     align-items: flex-start;
     gap: 4rem;
     padding: 1.5rem;
+    border-radius: 2.25rem;
     background-color: #ffffff;
   }
   main .container .sign-up-form .sign-up-benefits {
